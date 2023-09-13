@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="/css/update.css">
+
+    <title>Updating</title>
+</head>
+<body>
+<form th:action="@{/update}" th:object="${updateUserByFirstNameDto}" method="post">
+
+    <label class="hover" for="name">User FirstName</label>
+    <input  placeholder="Add FirstName which you want to change" class="hover" id="name" name="firstName" type="text" th:field="${updateUserByFirstNameDto.firstName}">
+
+    <label class="hover" for="email">User newEmail</label>
+    <input placeholder="new Email here" required class="hover" id="email" name="email" type="text" th:field="${updateUserByFirstNameDto.email}">
+
+    <button class="button hover" type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

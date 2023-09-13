@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+
+<form th:action="@{/get}" th:object="${idDto}" method="post">
+
+
+  <label for="id">User ID</label>
+  <input id="id" name="id" type="number" th:field="${idDto.id}">
+  <button class="button" type="submit">Submit</button>
+</form>
+
+</body>
+</html>

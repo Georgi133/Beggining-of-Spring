@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creating</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+<form th:action="@{/create}" th:object="${importDto}" method="post">
+    <ul>
+        <li>
+          <label for="firstName">First Name</label>
+          <input placeholder="MyNameHere" required id="firstName" th:field="${importDto.firstName}" type="text"/>
+        </li>
+        <li>
+           <label for="lastName">Last Name</label>
+            <input placeholder="MyLastNameHere" id="lastName" th:field="${importDto.lastName}" type="text">
+        </li>
+        <li>
+            <p class="attention">Pay attention that the date should be like the given pattern "01/10/1999".
+            Otherwise it won't be enrolled to the base</p>
+
+            <label for="dateOfBirth">Date of Birth</label>
+            <input placeholder="05/05/1995" id="dateOfBirth" th:field="${importDto.dateOfBirth}" type="text">
+        </li>
+        <li>
+            <label for="phoneNumber">Phone Number</label>
+            <input placeholder="+359 55555 555" id="phoneNumber" th:field="${importDto.phoneNumber}" type="text">
+        </li>
+        <li>
+            <label for="emailAddress">Email Address</label>
+            <input placeholder="example@gmail.com" required id="emailAddress" th:field="${importDto.emailAddress}" type="text">
+        </li>
+
+        <button class="button hover" type="submit">Submit</button>
+
+    </ul>
+</form>
+</body>
+</html>

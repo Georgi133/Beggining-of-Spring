@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deleting</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="/css/delete.css">
+</head>
+<body>
+<form th:action="@{/delete}" th:object="${deleteDtoByFirstName}" method="post">
+
+    <label for="id">User FirstName</label>
+    <input placeholder="Add FirstName here" required class="hover" id="id" name="id" type="text" th:field="${deleteDtoByFirstName.firstName}">
+    <button class="button" type="submit">Submit</button>
+
+</form>
+</body>
+</html>
